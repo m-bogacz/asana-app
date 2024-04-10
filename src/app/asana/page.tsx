@@ -3,7 +3,6 @@ export const runtime = "edge";
 export default async function Asana() {
 	const user = await getUserAsana();
 
-	console.log(user);
 	return (
 		<main className="flex flex-col items-center justify-center">
 			<section>
