@@ -22,13 +22,10 @@ export async function fetchIssues() {
 		},
 	);
 	if (!res.ok) {
-		console.log(res);
 		throw new Error(`Failed to fetch issues: ${res.status}`);
 	}
 
 	const data = await res.json();
-
-	console.log(data);
 
 	return data as Issue[];
 }
