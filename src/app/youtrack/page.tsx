@@ -1,5 +1,5 @@
 import { fetchIssues } from "@/services/youtrack/api";
-export const runtime = "edge";
+
 export default async function Youtrack() {
 	const data = await fetchIssues();
 

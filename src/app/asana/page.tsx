@@ -1,5 +1,5 @@
 import { getUserAsana } from "@/services/asana/user";
-export const runtime = "edge";
+
 export default async function Asana() {
 	const user = await getUserAsana();
 
