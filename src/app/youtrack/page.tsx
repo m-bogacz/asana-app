@@ -1,10 +1,11 @@
 import { fetchIssues } from "@/services/youtrack/api";
+export const runtime = "edge";
 
 export default async function Youtrack() {
 	const data = await fetchIssues();
 
-	if (!data) {
-		return <div>loading...</div>;
+	if (data.length === 0) {
+		return <div>no data</div>;
 	}
 
 	return (

@@ -16,8 +16,8 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<UserProvider>
-				<body>
+			<body>
+				<UserProvider>
 					<header className="w-screen ">
 						<nav className="flex justify-center gap-5">
 							<Link className="text-slate-400 hover:text-slate-300" href={"/"}>
@@ -30,12 +30,13 @@ export default function RootLayout({
 								Asana
 							</Link>
 							<a href="/api/auth/login">Login</a>
+							<a href="/api/auth/logout">Logout</a>
 						</nav>
 					</header>
 
 					{children}
-				</body>
-			</UserProvider>
+				</UserProvider>
+			</body>
 		</html>
 	);
 }
